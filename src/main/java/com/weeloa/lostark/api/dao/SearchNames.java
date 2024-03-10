@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Names {
+public class SearchNames {
     private List<String> searchNames;
 
     private void validation() {
