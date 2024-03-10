@@ -1,5 +1,6 @@
 HELP.md
 .gradle
+!**/src/main/java/com/weeloa/lostark/api/controller/TestController.java
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
