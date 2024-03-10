@@ -4,7 +4,7 @@ public class StringValidation {
 
     public static void isEmpty(String txt) {
         if (txt == null || txt.isEmpty()) {
-            throw dnew IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
     }
 }

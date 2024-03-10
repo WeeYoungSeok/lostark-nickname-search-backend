@@ -4,6 +4,7 @@ import com.weeloa.lostark.api.util.vaildator.StringValidation;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.IOException;
@@ -21,7 +22,11 @@ public class ApiKeyFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         String apiKey =  ((HttpServletRequest) request).getHeader("Authorization");
         StringValidation.isEmpty(apiKey);
-        log.info("api_key : " + apiKey);
+
+        HttpSession httpSession = ((HttpServletRequest) request).getSession();
+        httpSession.setAttribute("api_key", apiKey);
+
+        chain.doFilter(request, response);
     }
 
 
