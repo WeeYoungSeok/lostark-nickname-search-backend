@@ -5,7 +5,7 @@ import org.springframework.http.HttpHeaders;
 
 public class LostArkHeader {
 
-    public static HttpEntity getCharacterSearchHeader(String token) {
+    public static HttpEntity getHeader(String token) {
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.ACCEPT, "application/json");
         headers.set(HttpHeaders.AUTHORIZATION, "bearer " + token);
