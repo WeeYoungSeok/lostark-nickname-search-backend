@@ -1,18 +1,15 @@
 package com.weeloa.lostark.api.filter;
 
-import com.weeloa.lostark.api.util.lostark.LostArkConnection;
 import com.weeloa.lostark.api.util.vaildator.StringValidation;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpMethod;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.io.IOException;
 
 @Log4j2
-@WebFilter(urlPatterns = {"/api/*", "/test/*"})
+@WebFilter(urlPatterns = {"/api/*"})
 public class ApiKeyFilter implements Filter {
 
     @Override
